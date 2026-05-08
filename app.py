@@ -41,7 +41,6 @@ if seccion == "🏠 Inicio":
     col3.metric("🎨 Galerías y Talleres", f"{galerias}")
     col4.metric("🍽️ Donde Comer", f"{restaurantes}")
 
-    st.success("🚀 **Prototipo listo para la hackathon**")
     st.info("""
     **Cómo usar San FelipIA:**
     - Ve a **Chat Planificador** → Cuéntale tus preferencias (idioma, perfil, presupuesto...)

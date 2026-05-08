@@ -1,0 +1,8 @@
+onnxruntime
+pillow
+rembg
+streamlit
+pandas
+anthropic
+os
+openpyxl

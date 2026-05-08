@@ -4,5 +4,4 @@ rembg
 streamlit
 pandas
 anthropic
-os
 openpyxl

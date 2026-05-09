@@ -60,6 +60,13 @@ def mostrar_chat_sanfelipia():
     st.subheader("💬 San FelipIA - Planificador de Rutas")
     st.caption("Multilingüe • Puedes escribir en cualquier idioma")
 
+    # ===================== MENSAJE DE BLOQUEO =====================
+    st.warning("🔒 **Funcionalidad de Chat con IA temporalmente deshabilitada para el despliegue público.**")
+    st.info("""
+    Si quieres explorar esta funcionalidad, contáctanos: **www.linkedin.com/in/carlosazmora** \n
+    Mientras tanto, puedes explorar el **Catálogo Completo** con los 65 establecimientos aliados.
+    """)
+
     if "user_id" not in st.session_state:
         st.session_state.user_id = "hackathon_user"
 
@@ -83,7 +90,7 @@ Puedes escribirme **en cualquier idioma** (español, inglés, francés, portugu�
             st.markdown(msg["content"])
 
     # Input del usuario
-    if prompt := st.chat_input("Escribe tu mensaje aquí..."):
+    """if prompt := st.chat_input("Escribe tu mensaje aquí..."):
         st.session_state.messages.append({"role": "user", "content": prompt})
         with st.chat_message("user"):
             st.markdown(prompt)
@@ -94,6 +101,7 @@ Puedes escribirme **en cualquier idioma** (español, inglés, francés, portugu�
         st.session_state.messages.append({"role": "assistant", "content": respuesta})
         save_chat(st.session_state.user_id, st.session_state.messages)
         st.rerun()
+    """
 
     # Botón de reinicio
     st.markdown("---")
@@ -102,5 +110,13 @@ Puedes escribirme **en cualquier idioma** (español, inglés, francés, portugu�
         if st.button("🔄 Reiniciar Conversación", 
                      type="secondary", 
                      use_container_width=True,
-                     help="Borra el historial y comienza una nueva conversación"):
+                     help="Borra el historial y comienza una nueva conversación",
+                     disabled = True):
             reiniciar_chat()
+
+    # Input bloqueado
+    st.text_input(
+        "", 
+        disabled=True, 
+        placeholder="Chat con IA deshabilitado temporalmente"
+    )

@@ -55,4 +55,4 @@ elif seccion == "🗂️ Catálogo Completo":
 
 # Footer
 st.sidebar.markdown("---")
-st.sidebar.caption("San FelipIA v3 • Hackathon Edition")
+st.sidebar.caption("San FelipIA v3 • Social Skin / UniMilitar, 2026-1")
